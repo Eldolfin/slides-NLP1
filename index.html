@@ -165,27 +165,57 @@
 				- Régression Logistique
 				- Training: ~10mn
 
+				---
+				### Feedforward
+				![](assets/fnn_image.png)
+
+				Notes: 
+				Lucas qui parle 🗣️🗣️🔥
+				- 3 modèles et des hyperparamètres différents
+				- 3 embeddings différents: tf-idf et 2 modèles préentrainés w2v
+				- pr w2v, on a fait la moyenne de chaque embedding de mot
+				---
+				### Feedforward
+
+
+				| Modèle          | Hidden Size | Learning Rate | Train Loss | Test Loss | Accuracy |
+				|----------------|-------------|---------------|------------|-----------|----------|
+				| tf-idf         | 100         | 1e-4          | 0.091      | 0.40      | 0.89 |
+				| w2v (google)   | 1000        | 0.001         |1.62        | 1.53      | 0.54  |
+				| w2v (fasttext) | 1000        | 0.001         | 0.37       | 1.26      | 0.74  |
+
+				Notes: 
+				- présenter tableau
+				- le modèle w2v de google = modèle préentrainé sur le dataset Google-news
+				- w2v fastext en est un autre entrainé sur des données en français
+				- 100 époques d'entrainement
+				- solution retenue = tf-idf
 
 				---
 				
 				### RNN
 				![](assets/rnn_image.png)
 
+				Notes:
+				- 4 modèles et hyperparams
+				- embeddings onehot, w2v entrainé sur nos données et les 2 w2v préentrainés
+
 				---
 				### RNN
-				```python
-				Keras et compagnie
-				```
-				- NN
-				---
-				### FNN
-				![](assets/fnn_image.png)
-				---
-				### FNN
-				```python
-				idk
-				```
-				- NN
+
+
+				| Model        | Learning Rate | Epochs | Test Loss | Accuracy |
+				|--------------|---------------|--------|-----------|-----------|
+				| onehot       | 0.01          | 30     | 0.80      | 0.84   |
+				| w2v          | 0.1           | 30     | 1.66      | 0.55    |
+				| w2v (google)   | 0.01          | 100    | 0.85      | 0.77     |
+				| w2v (fasttext) | 0.01          | 200    | 0.90      | 0.79    |
+
+				Notes: 
+				-présenter tableau
+				-Le nombre de couches de RNN et la bidirectionalité négligeable dans nos tests
+				- solution retenue = w2v
+				
 				---
 				### Transformers
 				![](assets/transformers_image.png)
