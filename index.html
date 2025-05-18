@@ -24,39 +24,145 @@
 
 				Groupe 7 SCIA, Promo 2026
 
-				[Repo Github](https://github.com/Eldolfin/projet-NLP1)
+				https://github.com/Eldolfin/projet-NLP1
 
-				alexis.petignat,
+				https://github.com/Eldolfin/slides-NLP1
+
+				Alexis.petignat,
 				baptiste.villeneuve,
 				oscar.le-dauphin,
 				lucas.juanico,
 				max.nagaishi
 
+
 				Note:
-				This will only display in the notes window.
-				(press S to view in a separate window)
+				Alexis qui parle 🗣️🗣️🔥
+				
+
 				---
+
 				![](https://media1.tenor.com/m/gWXA2gvEmrQAAAAC/alexa-amazon.gif)
+
 				---
-				TODO: table of content + slides lol
+
+				- Le dataset
+				- Les modèles
+				- La démo 🔥
+				Note:
+				Alexis qui parle 🗣️🗣️🔥
+
 				---
+
 				## Le dataset
+				![](assets/massive.png)
+
+				Note:
+				Alexis qui parle 🗣️🗣️🔥
+
 				---
 
 				| Type | Distribution |
 				|------|--------------|
 				| Scenarios | ![](assets/scenario_distribution.png) |
 				| Intent | ![](assets/intent_distribution.png) |
+
 				---
-				### Ngrams
-				![](./assets/NGRAMS_report.png)
+
+				### Bag of words
+				- sklearn.feature_extraction.text.CountVectorizer
+				- Régression Logistique
+				- Training: < 1s
+
+
 				---
-				### TF-IDF
-				![](./assets/IDF_report.png)
-				---
+
 				### Bag of words
 				![](./assets/BAGOFWORDS_report.png)
+
+
 				---
+
+				### N-grams
+				- Implémentation Maison
+				- N = 2, 3, 4 (custom)
+				- Génération de texte
+				- Training: 1-10s
+
+				
+				---
+
+				### N-grams
+				![](./assets/NGRAMS_report.png)
+
+				---
+
+				### TF-IDF
+				- sklearn.feature_extraction.text.TfidfVectorizer
+				- Régression Logistique
+				- Training: < 3s
+
+				---
+
+				### TF-IDF
+				![](./assets/IDF_report.png)
+
+
+				---
+
+				### Word2Vec
+				```python
+				SentenceTransformer("dangvantuan/sentence-camembert-large")
+				```
+				- Régression Logistique
+				- Training: ~10mn
+
+
+
+
+				---
+				
+				### RNN
+				```python
+				Keras et compagnie
+				```
+				- NN
+				
+
+
+
+				---
+
+				### FNN
+				```python
+				idk
+				```
+				- NN
+
+
+				---
+
+				### Transformers
+				```python
+				from transformers import Trainer
+				```
+				- Training: 1h+
+
+
+				---
+
+				### Speach to text
+				- OpenAI's Whisper
+				- Too slow :(
+
+				---
+
+				## App terminal
+
+				- [Textualize](https://textual.textualize.io/)
+				- Demo time 🔥
+
+				---
+
 				# Questions ?
 				![](https://media1.tenor.com/m/6KmYotRTs50AAAAC/roodmuch-thinking.gif)
 			</section>
