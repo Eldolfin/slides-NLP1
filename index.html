@@ -45,9 +45,10 @@
 
 				---
 
-				- Le dataset
-				- Les modèles
-				- La démo 🔥
+				- 🗃️ Le dataset
+				- ✨ Les modèles
+				- 📈 Benchmaks
+				- ➕ Les extras
 				Note:
 				Alexis qui parle 🗣️🗣️🔥
 
@@ -55,6 +56,18 @@
 
 				## Le dataset
 				![](assets/massive.png)
+				---
+
+				## Le dataset
+
+				- **Source** : MASSIVE
+				- **Focus** : Sous-ensemble `fr-FR` (~16.5k énoncés)
+				- *Train: 11.5k, Validation: 2k, Test: 3k*
+				- **Objectif** : Reconnaissance de commandes d'assistant domotique
+				- **Structure** :
+				    - 18 Scénarios
+				    - 60 Intents
+				- **Approche** : Prédiction Scénario ➔ Prédiction Intent
 
 				Note:
 				basptiste qui parle 🗣️🗣️🔥
@@ -68,7 +81,21 @@
 
 				---
 
+				## Dataset : Analyse `fr-FR`
+
+				- **Forces :**
+				  - **Pertinent** & Annotations de qualité
+				  - **Taille** `fr-FR` importante et catégories claires
+
+				- **Faiblesses & Défis :**
+				  - **Gros déséquilibre des classes**
+				- Biais potentiels
+				- Absence de contexte conversationnel
+
+				---
+
 				## Bag of words
+				![](assets/bagofwords_image.png)
 				```python
 				sklearn.feature_extraction.text.CountVectorizer
 				```
@@ -84,6 +111,11 @@
 
 				---
 
+				## N-grams				
+				![](assets/ngrams_image.png)
+
+				---
+
 				## N-grams
 				- Implémentation Maison
 				- N = 2, 3, 4 (custom)
@@ -95,6 +127,10 @@
 
 				### N-grams
 				![](./assets/NGRAMS_report.png)
+				---
+
+				### TF-IDF
+				![](./assets/tfidf_image.png)
 
 				---
 
@@ -105,11 +141,18 @@
 				- Régression Logistique
 				- Training: < 3s
 
+
+
 				---
 
 				### TF-IDF
 				![](./assets/IDF_report.png)
 
+
+				---
+
+				### Word2Vec
+				![](assets/word2vec_image.png)
 
 				---
 
@@ -121,42 +164,58 @@
 				- Training: ~10mn
 
 
-
-
 				---
 				
+				### RNN
+				![](assets/rnn_image.png)
+
+				---
 				### RNN
 				```python
 				Keras et compagnie
 				```
 				- NN
-				
-
-
-
 				---
-
+				### FNN
+				![](assets/fnn_image.png)
+				---
 				### FNN
 				```python
 				idk
 				```
 				- NN
-
-
 				---
-
+				### Transformers
+				![](assets/transformers_image.png)
+				---
 				### Transformers
 				```python
 				from transformers import Trainer
 				```
 				- Training: 1h+
-
-
+				---
+				## Benchmarks
+				| Method           | Training time | F1 score (scenario)  | F1 score (intent) |
+				|------------------|---------------|----------------------|-------------------|
+				| BoW              | 1s            | 0.81                 | 0.784             |
+				| N-grams          | 10s           | 0.69                 | 0.65              |
+				| TF-IDF           | 3s            | 0.85                 | 0.845             |
+				| Word2Vec         | 10m           | 0.894                | 0.876             |
+				| FNN              | 30m           | 0.89                 | ?                 |
+				| RNN              | 30m           | 0.84                 | ?                 |
+				| Transformers     | +1h           | 0.911                | ?                 |
 				---
 
 				### Speach to text
-				- OpenAI's Whisper
-				- Too slow :(
+				- **Technologie** : **Whisper** d'OpenAI (modèle `small`).
+				- *Pourquoi Whisper?* Haute performance, robuste (accents, bruits de fond), intégration Python facile, différentes tailles de modèle.
+				- **Implémentation** :
+					1. Capture Audio
+					2. Pré-traitement Audio
+					3. Transcription
+				- **Limitations** :
+				    - Fiabilité.
+					- Latence/Vitesse.
 
 				---
 
