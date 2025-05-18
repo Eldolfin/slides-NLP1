@@ -1,40 +1,89 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+	<title>Slides Projet NLP1</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/black.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
+
+<body>
+	<div class="reveal">
+		<div class="slides">
+			<section data-markdown>
+				# Projet NLP1
+				#### Reconnaissance de commandes d’assistant domotique
+
+				Groupe 7 SCIA, Promo 2026
+
+				[Repo Github](https://github.com/Eldolfin/projet-NLP1)
+
+				alexis.petignat,
+				baptiste.villeneuve,
+				oscar.le-dauphin,
+				lucas.juanico,
+				max.nagaishi
+
+				Note:
+				This will only display in the notes window.
+				(press S to view in a separate window)
+				---
+				![](https://media1.tenor.com/m/gWXA2gvEmrQAAAAC/alexa-amazon.gif)
+				---
+				TODO: table of content + slides lol
+				---
+				## Le dataset
+				---
+
+				| Type | Distribution |
+				|------|--------------|
+				| Scenarios | ![](assets/scenario_distribution.png) |
+				| Intent | ![](assets/intent_distribution.png) |
+				---
+				### Ngrams
+				![](./assets/NGRAMS_report.png)
+				---
+				### TF-IDF
+				![](./assets/IDF_report.png)
+				---
+				### Bag of words
+				![](./assets/BAGOFWORDS_report.png)
+				---
+				# Questions ?
+				![](https://media1.tenor.com/m/6KmYotRTs50AAAAC/roodmuch-thinking.gif)
+			</section>
 		</div>
+	</div>
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+	<script src="dist/reveal.js"></script>
+	<script src="plugin/notes/notes.js"></script>
+	<script src="plugin/markdown/markdown.js"></script>
+	<script src="plugin/highlight/highlight.js"></script>
+	<script>
+		// More info about initialization & config:
+		// - https://revealjs.com/initialization/
+		// - https://revealjs.com/config/
+		Reveal.initialize({
+			hash: true,
+			slideNumber: 'c/t',
+			controls: false,
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+			// Learn about plugins: https://revealjs.com/plugins/
+			plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+
+			markdown: {
+				smartypants: true
+			}
+		});
+	</script>
+</body>
+
 </html>
